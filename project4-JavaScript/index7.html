@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title>String Manipulation</title>
+</head>
+<body>
+    <h1>Reverse String Function</h1>
+
+    <script>
+        
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+
+       
+        document.write(reverseString("hello world") + "<br>");       
+        document.write(reverseString("JavaScript") + "<br>");  
+        document.write(reverseString("123456789") + "<br>");       
+        document.write(reverseString("abcd efgh IJKL") + "<br>"); 
+        document.write(reverseString("Razvan") + "<br>"); 
+    </script>
+</body>
+</html>

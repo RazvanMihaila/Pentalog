@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Input and Validation</title>
+    </head>
+    <body>
+        <input type="text" id="number">
+        <button onclick="validateNumber()">Validate</button>
+        <p id="message"></p>
+
+        <script>
+            function validateNumber(){
+                var input=document.getElementById('number').value;
+                var message=document.getElementById('message');
+                var num=parseInt(input);
+
+                if(isNaN(num)||num<1||num>100){
+                    message.textContent="Error!"  
+                }
+                else{
+                    message.textContent="Succes!";
+                }
+            }
+        </script>
+    </body>
+</html>

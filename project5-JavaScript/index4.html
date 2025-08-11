@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creating and Removing Elements</title>
+    </head>
+    <body>
+        <button onclick="addNew()">Add new Item </button>
+        <button onclick="removeLast()">Remove the last Item</button>
+        <ul id="itemList"></ul>
+
+        <script>
+            function addNew(){
+                var list=document.getElementById('itemList');
+                for(var i=0;i<5;i++){
+                    var newItem=document.createElement('li');
+                    newItem.textContent='Item'+(list.children.length+1);
+                    list.appendChild(newItem);
+                }
+            }
+
+            function removeLast() {
+            var list = document.getElementById('itemList');
+            if (list.children.length > 0) {
+                list.removeChild(list.lastChild);
+            }
+        }
+        </script>
+    </body>
+</html>

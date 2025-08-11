@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    padding: 0px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:white;
+   
+   
+}
+
+  
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 1) 80%),
+                url('clipboard-landing-page-master/images/bg-header-desktop.png') no-repeat center top;
+    background-size: cover;
+}
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    padding:40px;
+    max-width: 600px;
+   
+}
+
+
+.logo{
+    width:60px;
+    margin-bottom: 20px;
+  
+}
+
+h1,h2{
+    
+    margin-bottom: 10px;
+}
+
+p{
+    color:rgb(188, 186, 186);
+    font-size: 16px;
+    margin-bottom: 15px;
+    
+}
+
+
+
+
+
+.buttons{
+    padding: 10px,20px;
+    border: none;
+    color:white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.button{
+    margin-top: 20px;
+    padding: 10px,20px;
+    border:none;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    border-radius: 50px;
+    height: 40px;
+    width: 170px;
+}
+.ios{
+    background-color: #4ca;
+}
+.mac{
+    background-color: #5d27fd;
+}
+
+
+
+/*Content 2*/
+.snippets-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.snippets-section h2{
+    font-size: 28px;
+  margin-bottom: 10px;
+}
+.snippets-section p{
+    max-width: 600px;
+}
+
+.snippet-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.computer-image{
+    
+    width: 100%;
+    
+    margin-left:-380px;
+}
+
+
+
+.description{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+
+}
+.item{
+  
+    padding: 15px;
+    border-radius: 8px;
+    
+}
+
+/*--------------------------//
+
+
+
+
+/*contente3*/
+
+.content3{
+    position: relative;
+    text-align: center;
+    
+    padding:40px;
+}
+
+.device-img{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   max-width: 1000px;
+   width: 100%;
+    
+}
+/*---------*/
+
+/*Content4*/
+.features{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:40px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feature-item{
+    flex: 1;
+    min-width: 200px;
+}
+
+.partners{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:100px;
+    padding: 40px 0;
+}
+.partners-img{
+    width: 120px;
+    filter: grayscale(100%);
+}
+
+.downloads{
+    text-align: center;
+    padding:40px;
+}
+
+.downloads h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.download-button{
+    padding: 10px 20px;
+    border:none;
+    color:white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 40px;
+    width: 170px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.feature-item p{
+    max-width: 300px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+/*------------------------------------*/
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 200px;
+}
+.footer .logo{
+    width:60px;
+    margin: 100px;
+}
+.footer .links{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
+    gap:20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer .social-networks{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 100px;
+}
+.links p{
+    text-align: left;
+}

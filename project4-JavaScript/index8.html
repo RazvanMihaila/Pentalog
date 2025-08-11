@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title>Object Creation and Access</title>
+    </head>
+    <body>
+        <h1>Book information</h1>
+        <script>
+            const book = {
+                title: "Animal Farm",
+                author: "George Orwell",
+                yearPublished: 1945
+            };
+
+            function displayBookInformation(book){
+                document.write("Book Information: " + "<br>");
+                document.write("Title: " + book.title + "<br>");
+                document.write("Author: "+ book.author + "<br>");
+                document.write("Year published: " + book.yearPublished + "<br>");
+            }
+            displayBookInformation(book);
+        </script>
+    </body>
+</html>

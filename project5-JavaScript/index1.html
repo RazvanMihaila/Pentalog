@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Changing Text Content</title>
+    </head>
+
+    <body>
+        <p id="p-id">Millions of people around the world suffer from low self-esteem, which often results in serious eating disorders such as anorexia. Why does this happen?</p>
+        
+        <button onclick="changeText()">Click</button>
+
+        <script>
+            function changeText(){
+                var text=document.getElementById('p-id');
+                text.textContent='Unfortunately, they are obsessed with their weight or other physical “flaws”. ';
+            }
+        </script>
+    </body>
+</html>

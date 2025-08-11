@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Summary Component</title>
+    <link rel="stylesheet" href="styles.css">
+  
+        
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <h2>Your Result</h2>
+            <div class="score" id="total-score">0</div>
+            <h3>Great</h3>
+            <p>You scored higher than <span id="percentage">0</span>% of people.</p>
+
+        </div>
+        <div class="summary">
+            <h3>Summary</h3>
+            <div id="categories"></div>
+            <button class="continue">Continue</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("./data.json?t=" + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Loaded data:", data); // Verifică în consolă dacă datele sunt corecte
+                    
+                    let totalScore = 0;
+                    let categoriesContainer = document.getElementById("categories");
+                    categoriesContainer.innerHTML = "";
+    
+                    data.forEach(item => {
+                        totalScore += item.score;
+                        let categoryDiv = document.createElement("div");
+                        categoryDiv.classList.add("category", item.category.toLowerCase());
+                        categoryDiv.innerHTML = `
+                            <img src="${item.icon}" alt="${item.category} icon">
+                            <span>${item.category}</span>
+                            <span>${item.score} / 100</span>
+                        `;
+                        categoriesContainer.appendChild(categoryDiv);
+                    });
+    
+                    let averageScore = Math.round(totalScore / data.length);
+                    document.getElementById("total-score").innerText = averageScore;
+                    document.getElementById("percentage").innerText = Math.round((averageScore / 100) * 100);
+                })
+                .catch(error => {
+                    console.error("Error loading data:", error);
+                    document.getElementById("categories").innerText = "Failed to load data!";
+                });
+        });
+    </script>
+    
+</body>
+</html>
