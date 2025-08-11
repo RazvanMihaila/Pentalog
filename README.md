@@ -44,3 +44,11 @@ Mini-programs for practicing logic and interaction with the DOM.
 - **Purpose:** Learning state management in React (`useState`, `useEffect`) and data persistence on the client.
 - **Folder:** `/todo-app`
 
+-----
+For HTML/CSS/JavaScript projects → open index.html in the browser.
+For todo-app:
+    cd todo-app
+    npm install
+    npm run dev
+
+
